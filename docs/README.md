@@ -119,8 +119,8 @@ In addition, use command `dir /a` to view all file include system file.
 >
 >  Directory of D:\Study\A01 - Notebook\Testing\Example
 >
-> 2020/09/15  09:45    \<DIR>          .
-> 2020/09/15  09:45    \<DIR>          ..
+> 2020/09/15  09:45    <DIR>          .
+> 2020/09/15  09:45    <DIR>          ..
 > 2020/09/15  09:46                32 example.txt
 >                1 File(s)             32 bytes
 >                2 Dir(s)  198,072,438,784 bytes free
