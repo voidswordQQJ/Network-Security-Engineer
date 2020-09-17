@@ -101,8 +101,11 @@ To create a file or folder, use command `mkdir` and `copy con [filename].txt` (A
 > D:\Study\A01 - Notebook\Testing>cd Example
 >
 > D:\Study\A01 - Notebook\Testing\Example>copy con example.txt
+>
 > Here is Henry!
+>
 > Here is Charlie!^Z
+>
 > Copy         1 File
 >
 > D:\Study\A01 - Notebook\Testing\Example>
@@ -114,24 +117,33 @@ In addition, use command `dir /a` to view all file include system file.
 > D:\Study\A01 - Notebook\Testing>cd Example
 >
 > D:\Study\A01 - Notebook\Testing\Example>dir
->  Volume in drive D is Database
->  Volume Serial Number is 7066-53F7
 >
->  Directory of D:\Study\A01 - Notebook\Testing\Example
+> Volume in drive D is Database
+>
+> Volume Serial Number is 7066-53F7
+>
+> Directory of D:\Study\A01 - Notebook\Testing\Example
 >
 > 2020/09/15  09:45    \<DIR>          .
+>
 > 2020/09/15  09:45    \<DIR>          ..
+>
 > 2020/09/15  09:46                32 example.txt
->                1 File(s)             32 bytes
->                2 Dir(s)  198,072,438,784 bytes free
+>
+> ​            1 File(s)             32 bytes
+>
+> ​            2 Dir(s)  198,072,438,784 bytes free
 >
 > D:\Study\A01 - Notebook\Testing\Example>
 
 To view the content in a file, use command `type [filename].txt` (Press `TAB` to auto fill filename)
 
 > D:\Study\A01 - Notebook\Testing\Example>type example.txt
+>
 > Here is Henry!
+>
 > Here is Charlie!
+>
 > D:\Study\A01 - Notebook\Testing\Example>
 
 To delete file, use command `del`.
@@ -144,15 +156,20 @@ To delete file, use command `del`.
 > D:\Study\A01 - Notebook\Testing\Example>del example.txt
 >
 > D:\Study\A01 - Notebook\Testing\Example>dir
->  Volume in drive D is Database
->  Volume Serial Number is 7066-53F7
 >
->  Directory of D:\Study\A01 - Notebook\Testing\Example
+> Volume in drive D is Database
+>
+> Volume Serial Number is 7066-53F7
+>
+> Directory of D:\Study\A01 - Notebook\Testing\Example
 >
 > 2020/09/15  10:15    \<DIR>          .
+>
 > 2020/09/15  10:15    \<DIR>          ..
->                0 File(s)              0 bytes
->                2 Dir(s)  198,072,438,784 bytes free
+>
+> ​            0 File(s)              0 bytes
+>
+> ​            2 Dir(s)  198,072,438,784 bytes free
 >
 > D:\Study\A01 - Notebook\Testing\Example>
 
@@ -167,41 +184,56 @@ To contribute the property to file or folder, use command `attrib`.
 Create Empty file with custom data size, use command `fsutil file createnew c:\system.ini 409600000 `.
 
 > D:\Study\A01 - Notebook\Testing\Example>fsutil file createnew example.txt 20480000
+>
 > File D:\Study\A01 - Notebook\Testing\Example\example.txt is created
 >
 > D:\Study\A01 - Notebook\Testing\Example>dir
->  Volume in drive D is Database
->  Volume Serial Number is 7066-53F7
 >
->  Directory of D:\Study\A01 - Notebook\Testing\Example
+> Volume in drive D is Database
+>
+> Volume Serial Number is 7066-53F7
+>
+> Directory of D:\Study\A01 - Notebook\Testing\Example
 >
 > 2020/09/15  10:43    \<DIR>          .
+>
 > 2020/09/15  10:43    \<DIR>          ..
+>
 > 2020/09/15  10:43        20,480,000 example.txt
->                1 File(s)     20,480,000 bytes
->                2 Dir(s)  198,051,954,688 bytes free
+>
+> ​            1 File(s)     20,480,000 bytes
+>
+> ​            2 Dir(s)  198,051,954,688 bytes free
 >
 > D:\Study\A01 - Notebook\Testing\Example>
 
 To copy or move file from origin directory to target directory, use command `copy ` and `move`.
 
 > D:\Study\A01 - Notebook\Testing\Example>copy example.txt ..\
->         1 file(s) copied.
+>
+> ​     1 file(s) copied.
 >
 > D:\Study\A01 - Notebook\Testing\Example>cd ..
 >
 > D:\Study\A01 - Notebook\Testing>dir
->  Volume in drive D is Database
->  Volume Serial Number is 7066-53F7
 >
->  Directory of D:\Study\A01 - Notebook\Testing
+> Volume in drive D is Database
+>
+> Volume Serial Number is 7066-53F7
+>
+> Directory of D:\Study\A01 - Notebook\Testing
 >
 > 2020/09/15  11:49    \<DIR>          .
+>
 > 2020/09/15  11:49    \<DIR>          ..
+>
 > 2020/09/15  10:43    \<DIR>          Example
+>
 > 2020/09/15  10:43        20,480,000 example.txt
->                1 File(s)     20,480,000 bytes
->                3 Dir(s)  198,031,593,472 bytes free
+>
+> ​            1 File(s)     20,480,000 bytes
+>
+> ​            3 Dir(s)  198,031,593,472 bytes free
 >
 > D:\Study\A01 - Notebook\Testing>
 
