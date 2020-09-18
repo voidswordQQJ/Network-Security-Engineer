@@ -1,5 +1,5 @@
 - Networking
-  - [Getting Started](./quickstart.md)
+  - [Getting Started](docs/quickstart.md)
   - [Network Foundation](./network-foundation.md)
   - [Switching Routing](./switching-routing-technology.md)
   - [Advanced Network](./advanced-network-technology.md)
