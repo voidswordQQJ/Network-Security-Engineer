@@ -1,7 +1,7 @@
 <!-- docs/_sidebar.md -->
 
 - Networking
-  - [Getting Started](./quickstart.md)
+  - [Getting Started](quickstart.md)
   - [Network Foundation](network-foundation.md)
   - [Switching Routing](switching-routing-technology.md)
   - [Advanced Network](advanced-network-technology.md)
