@@ -333,3 +333,61 @@ The reason to set up NTFS permissions is simple, prevent resources from being mo
 
 ### 6.1 File System
 
+File system is a method of organizing files on storage devices.
+
+Here is the common file system we have nowadays:
+
+> - Fat - Windows
+> - NTFS - Windows
+> - EXT - Linux
+
+### 6.2 Features of NTFS
+
+1. Improve disk read and write performance
+2. Reliability
+   - Encrypted file
+   - Security Permissions
+3. Good disk utilization
+4. Support single file more than 4G
+
+### 6.3 Edit NTFS Permissions
+
+To start to edit NTFS permissions, the first things we need to know file inheritance. The file inheritance is a setting helpful when you are editing multiple files permissions. It can pass down the permissions you edit until there is no file to pass down, and you can also disable it to set multiples files into the different permits. [Here](https://winaero.com/blog/enable-disable-inherited-permissions-windows-10/) is guide to enable or disable the file inheritance.
+
+| File Permission     | Permission Description                                       |
+| ------------------- | ------------------------------------------------------------ |
+| Full control        | Permissions to read, write, and execute, also include the special permissions |
+| Modify              | Permissions to read, write, and execute                      |
+| Read & execute      | Permissions to read and write                                |
+| Read                | Permission to read                                           |
+| Write               | Permission to write                                          |
+| Special permissions | Permission to change the permission                          |
+
+| Folder Permission    | Permission Description                                       |
+| -------------------- | ------------------------------------------------------------ |
+| Full control         | Permissions to read, write, and delete the file and folder, also include the special permission |
+| Modify               | Permissions to read, write, and delete the file and folder   |
+| Read & execute       | Permissions to download, read, and execute the file in folder |
+| List folder contents | Permission to list file content include in the folder        |
+| Read                 | Permission to download and read the file in folder           |
+| Write                | Permission to create the file in folder                      |
+| Special permissions  | Permission to change the permission                          |
+
+### 6.4 Permission Accumulation
+
+When a user are in multiple group, the permission is accumulate.
+
+For example, user Charly is in the IT and HR group, and the IT group has permissions to read, the HR group has permissions to write, then the final permissions Charly has is read and write.
+
+When user permission is accumulating, then deny permission is a priority to effect.
+
+### 6.5 Permission Inheritance
+
+File and folder ownership can be change by the administrator, [here](https://www.laptopmag.com/articles/take-ownership-folder-windows-10-using-file-explorer) is a guide of how to change it.
+
+Permission Inheritance can also force to effect, [here](https://www.tenforums.com/tutorials/88305-enable-disable-inherited-permissions-objects-windows.html) is a guide of how to force it.
+
+When you copy a file to the target folder, the origin file permission will then replaced by the target folder.
+
+## 7. File Share Server
+
