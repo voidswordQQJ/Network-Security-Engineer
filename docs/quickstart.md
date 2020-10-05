@@ -76,7 +76,7 @@ DOS, Disk Operate System, is a very old system we still using right now, for exa
 
 To locate drive, and access to a folder, use command `[Drive Letter]:` and `cd`.
 
-```bash
+```
 C:\Users\Eleven\Documents>D:
 
 D:\>cd D:\Study\A01 - Notebook\Testing
@@ -86,7 +86,7 @@ D:\Study\A01 - Notebook\Testing>
 
 To create a file or folder, use command `mkdir` and `copy con [filename].txt` (After typing the content, use `CTRL + Z` and press `Enter` to save)
 
-```bash
+```
 D:\Study\A01 - Notebook\Testing>mkdir Example
 
 D:\Study\A01 - Notebook\Testing>cd Example
@@ -103,7 +103,7 @@ To view all content in a folder, use command `dir`.
 
 In addition, use command `dir /a` to view all file include system file.
 
-```bash
+```
 D:\Study\A01 - Notebook\Testing>cd Example
 
 D:\Study\A01 - Notebook\Testing\Example>dir
@@ -123,7 +123,7 @@ D:\Study\A01 - Notebook\Testing\Example>
 
 To view the content in a file, use command `type [filename].txt` (Press `TAB` to auto fill filename)
 
-```bash
+```
 D:\Study\A01 - Notebook\Testing\Example>type example.txt
 Here is Henry!
 Here is Charlie!
@@ -137,7 +137,7 @@ To delete file, use command `del`.
 - `del \*.\*` - deleted all file
 - `del \*.\* /s /q` - forced to deleted all file
 
-```bash
+```
 D:\Study\A01 - Notebook\Testing\Example>del example.txt
 
 D:\Study\A01 - Notebook\Testing\Example>dir
@@ -164,7 +164,7 @@ To contribute the property to file or folder, use command `attrib`.
 
 Create Empty file with custom data size, use command `fsutil file createnew c:\system.ini 409600000 `.
 
-```bash
+```
 D:\Study\A01 - Notebook\Testing\Example>fsutil file createnew example.txt 20480000
 File D:\Study\A01 - Notebook\Testing\Example\example.txt is created
 
@@ -185,7 +185,7 @@ D:\Study\A01 - Notebook\Testing\Example>
 
 To copy or move file from origin directory to target directory, use command `copy ` and `move`.
 
-```bash
+```
 D:\Study\A01 - Notebook\Testing\Example>copy example.txt ..\
   1 file(s) copied.
 
@@ -391,3 +391,63 @@ When you copy a file to the target folder, the origin file permission will then 
 
 ## File Share Server
 
+File Share System provides file share service by the network, offer download, and upload services. (Similar to FTP Server)
+
+### Create Share Server
+
+To create a file share and share the folder with specific users:
+
+1. Create a local folder on your server computer. For example, create a folder called Share on the C:\ drive.
+2. Right click the folder, and then click Properties.
+3. Click the Sharing tab, and then click Share.
+4. Enter the name of your Windows user, and click Add.
+
+> Make a note of the network path shown in the confirmation screen as you use this later during setup of your shared persistence storage folders. The network path will be in the following format: \server-name\Share
+
+Things to mention, when you log in local, then you are only affected by the NTFS permissions. However, when you log in remote, then you are both affected by the NTFS permissions and share permissions, and take the intersection. Therefore, the recommended settings for share permissions are full control for everyone, then set up the detail in NTFS permissions.
+
+### Share Server Command
+
+All commands are practicing in CMD, and no third party applications are required.
+
+Use the command `net share` to list all running sharing.
+
+```
+C:\Users\Eleven>net share
+
+Share name   Resource                        Remark
+
+-------------------------------------------------------------------------------
+C$           C:\                             默认共享
+IPC$                                         远程 IPC
+D$           D:\                             默认共享
+E$           E:\                             默认共享
+F$           F:\                             默认共享
+ADMIN$       C:\Windows                      远程管理
+C02 - SMB    D:\Daily\C02 - SMB
+The command completed successfully.
+```
+
+Use the command `net share [Share name] /del` to delete sharing.
+
+```
+C:\Windows\system32>net share C$ /del
+C$ was deleted successfully.
+```
+
+Use the command `net share [Share name]=[Resource]` to create sharing.
+
+```
+C:\Windows\system32>net share C$=C:\
+C$ was shared successfully.
+```
+
+### Disable Share Server (Disable Port 445)
+
+To modify the ports and programs permitted by Windows Firewall:
+
+1. On the computer that runs Windows Firewall, open Control Panel.
+2. Right-click Windows Firewall, and then click Open.
+3. Configure any required exceptions and any custom programs and ports that you require.
+
+Although I didn't give an actual method about how to disable the port, instead I want you to try to learn firewall controls for Windows by yourself, and it's simple.
