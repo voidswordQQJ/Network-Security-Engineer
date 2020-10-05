@@ -442,7 +442,9 @@ C:\Windows\system32>net share C$=C:\
 C$ was shared successfully.
 ```
 
-### Disable Share Server (Disable Port 445)
+### Disable Share Server
+
+To begin, File Share Server SMB is using TCP port 445 for sharing, which means if we block the port 445, then no one else can access it.
 
 To modify the ports and programs permitted by Windows Firewall:
 
