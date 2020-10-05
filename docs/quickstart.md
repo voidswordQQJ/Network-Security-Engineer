@@ -12,7 +12,7 @@ Before we actually stated to learned the network foundation staff, we need to se
     - OpenVAS or Nessus
     - AWVS Web Scanner
 
-## 1. Intro to IP Address
+## Intro to IP Address
 
 The IP address and its subnet mask is one pair, and the subnet mask divide network address and host address.
 
@@ -36,7 +36,7 @@ You might think why the maximum is 254, it's because the base different, the IPv
 
 In addition, we cannot use 0 and 255 in a IPv4 Address because they are take place in the subnet mask.
 
-## 2. Base Conversion
+## Base Conversion
 
 Base Conversion is simple, and the three main bases that we use nowadays are binary, decimal, and hex.
 
@@ -68,7 +68,7 @@ Most computers manipulate binary data, but it is difficult for humans to work wi
 
 With little practice, mapping 1111 to 0xF in one step becomes easy: see table in written representation. The advantage of using hexadecimal rather than decimal increases rapidly with the size of the number. When the number becomes large, conversion to decimal is very tedious. However, when mapping to hexadecimal, it is trivial to regard the binary string as 4-digit groups and map each to a single hexadecimal digit.
 
-## 3. Basic Dos Command
+## Basic Dos Command
 
 DOS, Disk Operate System, is a very old system we still using right now, for example CMD is a DOS. In this lesson, we are learning some simples DOS commands.
 
@@ -209,9 +209,9 @@ D:\Study\A01 - Notebook\Testing>
 
 
 
-## 4. User and Group Management
+## User and Group Management
 
-### 4.1 User Manage
+### User Manage
 
 User overview:
 
@@ -259,7 +259,7 @@ User manage commands:
 >
 > net user [username] [password] /add - add a new user
 
-### 4.2 Group Manage
+### Group Manage
 
  Group overview:
 
@@ -289,9 +289,9 @@ Group manage commands:
 >
 > net localgroup [group name] /del - delete a group
 
-## 5. Remote Connect
+## Remote Connect
 
-### 5.1 Microsoft Terminal Services
+### Microsoft Terminal Services
 
 In Windows 10 or later, you can configure your PC for remote access with a few easy steps.
 
@@ -307,7 +307,7 @@ In Windows 7 and early version of Windows 10, to configure your PC for remote ac
 
 To connect to a Microsoft Terminal Server, by press `Win + R` and enter `mstsc` in the text bar to open the client.
 
-### 5.2 Telnet Services
+### Telnet Services
 
 In Windows 2008 or later, you can configure your PC for telnet access with a few easy steps.
 
@@ -321,17 +321,17 @@ In Windows 2008 or later, you can configure your PC for telnet access with a few
 
 To connect to a Telnet Server, by press `Win + R` and enter `cmd` in the test bar, then use command `telnet [hostname]`.
 
-### 5.3 SSH Services
+### SSH Services
 
 Right now, we are not using SSH for learning, but it will include in the future when we talk about Linux Security, so the only thing to reminder now is the SSH port is 22.
 
-## 6. NTFS Security Permissions
+## NTFS Security Permissions
 
 By setting NTFS permissions, different users have different permissions, and users can access only after setting the correct access permissions.
 
 The reason to set up NTFS permissions is simple, prevent resources from being modified or deleted without authorization.
 
-### 6.1 File System
+### File System
 
 File system is a method of organizing files on storage devices.
 
@@ -341,7 +341,7 @@ Here is the common file system we have nowadays:
 > - NTFS - Windows
 > - EXT - Linux
 
-### 6.2 Features of NTFS
+### Features of NTFS
 
 1. Improve disk read and write performance
 2. Reliability
@@ -350,7 +350,7 @@ Here is the common file system we have nowadays:
 3. Good disk utilization
 4. Support single file more than 4G
 
-### 6.3 Edit NTFS Permissions
+### Edit NTFS Permissions
 
 To start to edit NTFS permissions, the first things we need to know file inheritance. The file inheritance is a setting helpful when you are editing multiple files permissions. It can pass down the permissions you edit until there is no file to pass down, and you can also disable it to set multiples files into the different permits. [Here](https://winaero.com/blog/enable-disable-inherited-permissions-windows-10/) is guide to enable or disable the file inheritance.
 
@@ -373,7 +373,7 @@ To start to edit NTFS permissions, the first things we need to know file inherit
 | Write                | Permission to create the file in folder                      |
 | Special permissions  | Permission to change the permission                          |
 
-### 6.4 Permission Accumulation
+### Permission Accumulation
 
 When a user are in multiple group, the permission is accumulate.
 
@@ -381,7 +381,7 @@ For example, user Charly is in the IT and HR group, and the IT group has permiss
 
 When user permission is accumulating, then deny permission is a priority to effect.
 
-### 6.5 Permission Inheritance
+### Permission Inheritance
 
 File and folder ownership can be change by the administrator, [here](https://www.laptopmag.com/articles/take-ownership-folder-windows-10-using-file-explorer) is a guide of how to change it.
 
@@ -389,5 +389,5 @@ Permission Inheritance can also force to effect, [here](https://www.tenforums.co
 
 When you copy a file to the target folder, the origin file permission will then replaced by the target folder.
 
-## 7. File Share Server
+## File Share Server
 
